@@ -15,9 +15,9 @@ export default function Login({ setToken }) {
         password
     };
     axios
-        .post("http://crudapi.work/api/login", credential)
+        .post("http://vaccinnote.work/api/login", credential)
         .then(res => {
-            setToken(res.data)
+            setToken(res.data.access_token)
             console.log(res.data)
         })
         .catch(err => {
